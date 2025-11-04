@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plantitud - Tu alternativa sustentable a la carne</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-circle">
+          <img src="public/logo.jpg" alt="Plantitud Logo" class="header-logo">
+        </div>
+        <span class="logo-text">plantitud.mx</span>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMenu()"><i data-lucide="menu"></i></button>
+      <div class="nav-actions">
+        <div id="cart-icon" class="cart-icon-wrapper">
+          <i data-lucide="shopping-cart"></i>
+          <span id="cart-item-count" class="cart-item-count">0</span>
+        </div>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#yaca">Yaca</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#por-que">Por qué</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 id="heroTitle">Tu alternativa sustentable a la carne</h1>
+        <p id="heroSubtitle">Productos deliciosos hechos a base de yaca, una opción saludable, versátil y amigable con el planeta</p>
+        <a href="#productos" class="cta-button" id="ctaButton">Explora nuestros productos</a>
+      </div>
+      <div class="hero-image">
+        <div class="hero-visual">
+          <img src="public/hero section.jpg" alt="Platillo de yaca" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Yaca Section -->
+  <section class="about-yaca" id="yaca">
+    <div class="container">
+      <div class="about-yaca-header">
+        <span class="about-badge">Descubre la Yaca</span>
+        <h2 class="section-title" id="aboutTitle">¿Qué es la carne de yaca?</h2>
+        <p class="about-subtitle">La yaca (jackfruit) es una fruta tropical con una textura fibrosa única que la hace perfecta como sustituto de la carne. Es naturalmente versátil, absorbe sabores maravillosamente y ofrece una experiencia culinaria deliciosa y sustentable.</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card featured">
+          <div class="benefit-card-icon">
+            <i data-lucide="leaf"></i>
+          </div>
+          <div class="benefit-card-content">
+            <h3>Origen Natural</h3>
+            <p>Fruta tropical 100% vegetal con textura fibrosa similar a la carne desmenuzada. Sin procesamiento químico.</p>
+            <div class="benefit-highlight">
+              <i data-lucide="check-circle"></i>
+              <span>Libre de soya y gluten</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <i data-lucide="utensils"></i>
+          </div>
+          <div class="benefit-card-content">
+            <h3>Versátil en Cocina</h3>
+            <p>Ideal para múltiples recetas: currys, tacos, barbacoa, tinga, birria y mucho más.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <i data-lucide="globe"></i>
+          </div>
+          <div class="benefit-card-content">
+            <h3>Sostenible</h3>
+            <p>Requiere menos agua y tierra que la ganadería tradicional. Una opción consciente.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-card-icon">
+            <i data-lucide="heart"></i>
+          </div>
+          <div class="benefit-card-content">
+            <h3>Nutritiva</h3>
+            <p>Rica en fibra, potasio, magnesio, zinc y vitaminas A, C, E y B.</p>
+          </div>
+        </div>
+
+        <div class="benefit-card accent">
+          <div class="benefit-card-content">
+            <div class="nutrition-stats">
+              <div class="stat">
+                <span class="stat-value">0g</span>
+                <span class="stat-label">Colesterol</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">95</span>
+                <span class="stat-label">Calorías/100g</span>
+              </div>
+              <div class="stat">
+                <span class="stat-value">2.4g</span>
+                <span class="stat-label">Fibra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <h2 class="section-title">Nuestro Proceso Artesanal</h2>
+      <div class="process-cards">
+        <div class="process-card">
+          <div class="process-step-number">Paso 1</div>
+          <h3>Abastecimiento</h3>
+          <p>Seleccionamos yaca fresca de productores locales, apoyando la economía regional y garantizando calidad.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-number">Paso 2</div>
+          <h3>Elaboración</h3>
+          <p>Limpieza y preparación cuidadosa de cada pieza, manteniendo la textura perfecta para cada producto.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-number">Paso 3</div>
+          <h3>Sazonado</h3>
+          <p>Marinamos con ingredientes naturales y especias seleccionadas para crear sabores auténticos y deliciosos.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-step-number">Paso 4</div>
+          <h3>Empaque</h3>
+          <p>Sellado al alto vacío para garantizar frescura, sabor y una vida útil óptima del producto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="productos">
+    <div class="container">
+      <h2 class="section-title">Productos Plantitud</h2>
+      <div class="products-grid">
+        <div class="product-card" data-product-id="yacarnitas">
+          <div class="product-image"><img src="public/438651654_17853698337171843_5772834246784539142_n.jpg" alt="Yacarnitas"></div>
+          <div class="product-info">
+            <h3>Yacarnitas</h3>
+            <p>Yaca sazonada lista para servir. Perfecta para tacos, tortas y cualquier antojo mexicano.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="yacarnitas-ahumadas">
+          <div class="product-image"><img src="public/467005388_17881819827171843_4967641793766953370_n.jpg" alt="Yacarnitas Ahumadas"></div>
+          <div class="product-info">
+            <h3>Yacarnitas Ahumadas</h3>
+            <p>Versión con toque ahumado que añade profundidad y sabor intenso a tus platillos favoritos.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="mar-lyn">
+          <div class="product-image"><img src="public/469330086_17883936978171843_8651376783503214477_n.jpg" alt="Mar-Lyn"></div>
+          <div class="product-info">
+            <h3>Mar-Lyn</h3>
+            <p>Alternativa vegetal al marlín. Textura y sabor marino sin comprometer el océano.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="yaca-natural">
+          <div class="product-image"><img src="public/469339997_17884199676171843_3672591337304977708_n.jpg" alt="Yaca Natural"></div>
+          <div class="product-info">
+            <h3>Yaca Natural</h3>
+            <p>Base versátil para cocinar. Crea tus propias recetas con esta opción sin sazonar.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="tinga-yaca">
+          <div class="product-image"><img src="public/438651654_17853698337171843_5772834246784539142_n.jpg" alt="Tinga de Yaca"></div>
+          <div class="product-info">
+            <h3>Tinga de Yaca</h3>
+            <p>Receta mexicana tradicional con tomate, chipotle y especias. Lista para disfrutar.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="mole-oaxaqueno">
+          <div class="product-image"><img src="public/467005388_17881819827171843_4967641793766953370_n.jpg" alt="Mole Oaxaqueño"></div>
+          <div class="product-info">
+            <h3>Mole Oaxaqueño</h3>
+            <p>Sabor profundo y especiado con la auténtica receta oaxaqueña. Una experiencia única.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="birria-vegana">
+          <div class="product-image"><img src="public/469330086_17883936978171843_8651376783503214477_n.jpg" alt="Birria Vegana"></div>
+          <div class="product-info">
+            <h3>Birria Vegana</h3>
+            <p>Cocción lenta con mezcla de chiles y hierbas. El sabor tradicional que amas, 100% vegetal.</p>
+          </div>
+        </div>
+        <div class="product-card" data-product-id="yacalao">
+          <div class="product-image"><img src="public/469339997_17884199676171843_3672591337304977708_n.jpg" alt="Yacalao"></div>
+          <div class="product-info">
+            <h3>Yacalao</h3>
+            <p>Edición navideña: yaca guisada estilo vizcaíno. Tradición y sabor para tus celebraciones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section - Rediseñada -->
+  <section class="why-choose" id="por-que">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tagline">Nuestros Valores</span>
+        <h2 class="section-title">Razones para elegir <span class="highlight-text">Plantitud</span></h2>
+        <p class="section-subtitle">Descubre por qué miles de personas ya confían en nuestros productos para una alimentación más consciente</p>
+      </div>
+      
+      <div class="reasons-grid">
+        <!-- Tarjeta 1 -->
+        <div class="reason-card" style="--card-color: #e6f7ee;">
+          <div class="card-icon-bg">
+            <i data-lucide="leaf" class="reason-icon"></i>
+          </div>
+          <h3>Sustentabilidad</h3>
+          <p>Reducimos la huella de carbono en un 80% comparado con la carne tradicional. Cada bocado es un paso hacia un planeta más verde.</p>
+          <div class="card-decoration"></div>
+        </div>
+        
+        <!-- Tarjeta 2 -->
+        <div class="reason-card" style="--card-color: #e6f0ff;">
+          <div class="card-icon-bg">
+            <i data-lucide="sparkles" class="reason-icon"></i>
+          </div>
+          <h3>Innovación</h3>
+          <p>Tecnología y tradición se unen para ofrecerte texturas y sabores que sorprenderán a tu paladar.</p>
+          <div class="card-decoration"></div>
+        </div>
+        
+        <!-- Tarjeta 3 -->
+        <div class="reason-card" style="--card-color: #f0e6ff;">
+          <div class="card-icon-bg">
+            <i data-lucide="shield-check" class="reason-icon"></i>
+          </div>
+          <h3>Seguridad Alimentaria</h3>
+          <p>Libre de alérgenos comunes como soya y gluten. Certificaciones de calidad que respaldan nuestra promesa.</p>
+          <div class="card-decoration"></div>
+        </div>
+        
+        <!-- Tarjeta 4 -->
+        <div class="reason-card" style="--card-color: #fff0f5;">
+          <div class="card-icon-bg">
+            <i data-lucide="heart" class="reason-icon"></i>
+          </div>
+          <h3>Salud</h3>
+          <p>Rico en fibra, vitaminas y minerales. Una opción que tu cuerpo agradecerá sin sacrificar el sabor.</p>
+          <div class="card-decoration"></div>
+        </div>
+        
+        <!-- Tarjeta 6 - CTA -->
+        <div class="reason-card cta-card">
+          <div class="cta-content">
+            <h3>¿Listo para probar?</h3>
+            <p>Descubre el sabor de la revolución vegetal con nuestros productos estrella.</p>
+            <a href="#productos" class="cta-button">Ver Productos</a>
+          </div>
+          <div class="cta-decoration">
+            <i data-lucide="shopping-bag" class="cta-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section - Rediseñada -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-content">
+          <h2 class="section-title">¡Conéctate con Nosotros!</h2>
+          <p class="contact-subtitle">Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y promociones.</p>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://wa.me/523339682571" target="_blank" rel="noopener noreferrer" class="social-card" style="--social-color: #25D366;">
+            <i data-lucide="message-circle" class="social-icon"></i>
+            <span>WhatsApp</span>
+            <p class="contact-number">33 3968 2571</p>
+          </a>
+          
+          <a href="https://www.instagram.com/plantitud.mx/" target="_blank" rel="noopener noreferrer" class="social-card" style="--social-color: #E1306C;">
+            <i data-lucide="instagram" class="social-icon"></i>
+            <span>Instagram</span>
+            <p class="social-username">@plantitud.mx</p>
+          </a>
+          
+          <a href="https://www.tiktok.com/@plantitud.mx" target="_blank" rel="noopener noreferrer" class="social-card" style="--social-color: #000000;">
+            <i data-lucide="music-2" class="social-icon"></i>
+            <span>TikTok</span>
+            <p class="social-username">@plantitud.mx</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    
+    <div class="footer-content">
+      <div class="footer-main">
+        <div class="footer-social">
+          <a href="https://wa.me/523339682571" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i data-lucide="message-circle"></i>
+          </a>
+          <a href="https://www.instagram.com/plantitud.mx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i data-lucide="instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@plantitud.mx" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i data-lucide="music-2"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-legal">
+        <div class="footer-legal-content">
+          <p>&copy; 2025 Plantitud. <a href="https://mvgn.vercel.app" target="_blank" rel="noopener" style="color: #86efac; text-decoration: none;">BY MVGN LABS</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón de volver arriba -->
+  <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+    <i data-lucide="arrow-up"></i>
+  </button>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="modal" onclick="closeModal(event, 'product-modal')">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeProductModal()"><i data-lucide="x"></i></button>
+      <h3 class="modal-title" id="modal-product-name">Nombre del Producto</h3>
+      <p id="modal-product-description" style="color: #4a5568; margin-bottom: 1rem;">Descripción detallada del producto.</p>
+      <p id="modal-product-details" style="font-size: 0.95rem; color: #718096; margin-bottom: 1.5rem;">Detalles adicionales, contenido, etc.</p>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <p class="modal-price">Precio: $<span id="modal-product-price">0.00</span> MXN</p>
+        <p style="font-weight: 600; color: var(--color-accent);"><span id="modal-product-size">500g</span></p>
+      </div>
+      <div class="quantity-controls">
+        <label style="font-weight: 600; min-width: 80px;">Unidades:</label>
+        <button onclick="updateQuantity(-1)">-</button>
+        <span id="modal-product-quantity" class="quantity-display">1</span>
+        <button onclick="updateQuantity(1)">+</button>
+      </div>
+      <button id="add-to-cart-btn" class="add-to-cart-btn" onclick="addToCart()">Añadir al Carrito</button>
+      <div id="cart-message" style="margin-top: 1rem; color: var(--color-primary); font-weight: 600; text-align: center; display: none;">¡Añadido al carrito!</div>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div id="cart-overlay" class="modal-overlay"></div>
+  
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-sidebar">
+    <div class="cart-header">
+      <h3 class="modal-title"><i data-lucide="shopping-cart"></i> Tu Carrito</h3>
+      <button class="close-btn" onclick="closeCartModal()">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    
+    <div class="cart-body">
+      <div id="cart-items">
+        <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+        <div class="cart-empty">
+          <i data-lucide="shopping-bag" style="width: 48px; height: 48px; margin-bottom: 1rem; opacity: 0.3;"></i>
+          <p>El carrito está vacío</p>
+          <p class="cart-empty-subtitle">¡Agrega productos para comenzar!</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal:</span>
+          <span class="cart-subtotal">$<span id="cart-subtotal-price">0.00</span> MXN</span>
+        </div>
+        <div class="cart-summary-row cart-total-row">
+          <span>Total:</span>
+          <span class="cart-total">$<span id="cart-total-price">0.00</span> MXN</span>
+        </div>
+      </div>
+      <button class="checkout-btn" onclick="sendWhatsAppQuote()" id="checkout-btn" disabled>
+        <i data-lucide="message-square-text"></i> Enviar Cotización por WhatsApp
+      </button>
+      <p class="cart-footer-note">*Los precios pueden variar según disponibilidad y ubicación de entrega.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
