@@ -6,7 +6,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "sandwich", 
-        image: "public/438651654_17853698337171843_5772834246784539142_n.jpg",
+        image: "/438651654_17853698337171843_5772834246784539142_n.jpg",
         description: "Yaca marinada y sazonada con especias lista para calentar y servir.",
         details: "Ingredientes: Yaca, pasta de achiote, vinagre, naranja, especias. Libre de gluten y soya."
     },
@@ -16,7 +16,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "flame", 
-        image: "public/467005388_17881819827171843_4967641793766953370_n.jpg",
+        image: "/467005388_17881819827171843_4967641793766953370_n.jpg",
         description: "Nuestra version de Yacarnitas con un toque Ahumado lista para preparar en hamburguesas, sandwiches y más.",
         details: "Ingredientes: Yaca, especias, humo líquido natural, chile de árbol. Perfecto para BBQ."
     },
@@ -26,7 +26,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "fish", 
-        image: "public/469330086_17883936978171843_8651376783503214477_n.jpg",
+        image: "/469330086_17883936978171843_8651376783503214477_n.jpg",
         description: "Marlín vegano de yaca, una alternativa deliciosa y ética al tradicional marlin.",
         details: "Ingredientes: Yaca, algas marinas, especias, aceite de oliva. Sabor umami y textura inigualable."
     },
@@ -36,7 +36,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "chef-hat", 
-        image: "public/469339997_17884199676171843_3672591337304977708_n.jpg",
+        image: "/469339997_17884199676171843_3672591337304977708_n.jpg",
         description: "Yaca natural cocida y aromatizada con especias lista para agregar a tu plato favorito o crear tus propias recetas.",
         details: "Ingredientes: Yaca. Ideal para absorber cualquier sabor. Congelable."
     },
@@ -46,7 +46,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "pepper", 
-        image: "public/438651654_17853698337171843_5772834246784539142_n.jpg",
+        image: "/438651654_17853698337171843_5772834246784539142_n.jpg",
         description: "Nuestra tinga a base de yaca imita la textura tierna y desmenuzada del pollo cocinada con una rica salsa a base de tomate y chipotle.",
         details: "Ingredientes: Yaca, jitomate, cebolla, chipotle, especias. Producto gourmet."
     },
@@ -56,7 +56,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "soup", 
-        image: "public/467005388_17881819827171843_4967641793766953370_n.jpg",
+        image: "/467005388_17881819827171843_4967641793766953370_n.jpg",
         description: "Sumérgete en los sabores ricos y profundos de la cocina tradicional Mexicana con nuestro mole estilo Oaxaqueño.",
         details: "Ingredientes: Yaca, mole negro de Oaxaca (chile, chocolate, especias), aceite vegetal."
     },
@@ -66,7 +66,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "cooking-pot", 
-        image: "public/469330086_17883936978171843_8651376783503214477_n.jpg",
+        image: "/469330086_17883936978171843_8651376783503214477_n.jpg",
         description: "Capturamos la textura tierna y jugosa de la carne y cocinamos lentamente con una mezcla de chiles, especias y hierba aromaticas logrando el sabor profundo y especiado que caracteriza a la birria.",
         details: "Ingredientes: Yaca, mezcla de chiles, especias, laurel. Sabor auténtico de birria."
     },
@@ -76,7 +76,7 @@ const PRODUCTS = {
         price: 500.00, 
         size: "500g", 
         icon: "gift", 
-        image: "public/469339997_17884199676171843_3672591337304977708_n.jpg",
+        image: "/469339997_17884199676171843_3672591337304977708_n.jpg",
         description: "Yaca guisada con aceite de oliva, una rica mezcla de tomate, aceitunas, alcaparras y especias recreando el caracteristico sabor del bacalao a la vizcaina.",
         details: "*Disponible solo en temporada navideña"
     }
