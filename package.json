@@ -1,0 +1,16 @@
+{
+  "name": "plantitud",
+  "version": "1.0.0",
+  "description": "Sitio web de Plantitud - Alternativa sustentable a la carne",
+  "scripts": {
+    "build": "echo 'No se requiere compilación para este proyecto'",
+    "start": "serve -s ."
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=14.x"
+  }
+}
