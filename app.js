@@ -258,16 +258,18 @@ function renderCart() {
             <div class="cart-item-details">
                 <h4>${product.name}</h4>
                 <p>${product.size} • $${product.price.toFixed(2)} c/u</p>
-            </div>
-            <div class="cart-item-quantity">
-                <button class="quantity-btn" onclick="event.stopPropagation(); updateCartItem('${productId}', -1)">-</button>
-                <span>${quantity}</span>
-                <button class="quantity-btn" onclick="event.stopPropagation(); updateCartItem('${productId}', 1)">+</button>
+                <div class="cart-item-actions">
+                    <div class="cart-item-quantity">
+                        <button class="quantity-btn" onclick="event.stopPropagation(); updateCartItem('${productId}', -1)">-</button>
+                        <span>${quantity}</span>
+                        <button class="quantity-btn" onclick="event.stopPropagation(); updateCartItem('${productId}', 1)">+</button>
+                    </div>
+                    <button class="cart-item-remove" onclick="event.stopPropagation(); removeFromCart('${productId}')">
+                        <i data-lucide="trash-2"></i>
+                    </button>
+                </div>
             </div>
             <div class="cart-item-total">$${itemTotal.toFixed(2)}</div>
-            <button class="cart-item-remove" onclick="event.stopPropagation(); removeFromCart('${productId}')">
-                <i data-lucide="x"></i>
-            </button>
         `;
         
         cartItems.appendChild(itemElement);
@@ -300,19 +302,7 @@ function renderCart() {
     }
 }
 
-function updateCartItem(productId, change) {
-    const currentQty = cart[productId] || 0;
-    const newQty = Math.max(0, currentQty + change);
 
-    if (newQty === 0) {
-        delete cart[productId];
-    } else {
-        cart[productId] = newQty;
-    }
-
-    localStorage.setItem('plantitudCart', JSON.stringify(cart));
-    renderCart();
-}
 
 function updateCartItem(productId, change) {
     if (!cart[productId]) return;
