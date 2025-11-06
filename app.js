@@ -50,15 +50,15 @@ const PRODUCTS = {
         description: "Nuestra tinga a base de yaca imita la textura tierna y desmenuzada del pollo cocinada con una rica salsa a base de tomate y chipotle.",
         details: "Ingredientes: Yaca, jitomate, cebolla, chipotle, especias. Producto gourmet."
     },
-    "mole-oaxaqueno": { 
-        id: "mole-oaxaqueno",
-        name: "Mole Oaxaqueño", 
+    "yacamole": { 
+        id: "yacamole",
+        name: "Yacamole", 
         price: 500.00, 
         size: "500g", 
-        icon: "soup", 
-        image: "public/467005388_17881819827171843_4967641793766953370_n.jpg",
-        description: "Sumérgete en los sabores ricos y profundos de la cocina tradicional Mexicana con nuestro mole estilo Oaxaqueño.",
-        details: "Ingredientes: Yaca, mole negro de Oaxaca (chile, chocolate, especias), aceite vegetal."
+        icon: "chef-hat", 
+        image: "public/yacamole 1.jpg",
+        description: "Delicioso mole oaxaqueño preparado con yaca, una fusión de sabores tradicionales con un toque innovador.",
+        details: "Ingredientes: Yaca, chiles, chocolate, especias, almendras, pasas. Acompaña con arroz o tortillas calientes."
     },
     "birria-vegana": { 
         id: "birria-vegana",
