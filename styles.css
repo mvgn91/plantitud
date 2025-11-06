@@ -1284,56 +1284,22 @@ section {
   height: 28px;
 }
 
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-  .social-links {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-  }
-  
-  .social-card {
-    min-height: 160px;
-  }
+
+@media (max-width: 767px) {
+    #product-modal .modal-content {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    #product-modal .modal-image-container {
+        height: 200px;
+    }
+
+    .cart-sidebar {
+        max-width: 100%;
+    }
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  
-  .contact-content {
-    padding-right: 0;
-    text-align: center;
-  }
-  
-  .contact-method {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .social-links {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .social-links {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-method {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  
-  .contact-icon {
-    margin-bottom: 1rem;
-  }
-}
 
 /* =====================
    FOOTER ESTILOS
