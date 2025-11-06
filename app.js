@@ -114,6 +114,7 @@ function openProductModal(productId) {
     currentQuantity = cart[productId] || 1; // Muestra la cantidad actual en carrito o 1 por defecto
 
     // Update modal content
+    document.getElementById('modal-product-image').src = currentProductInModal.image;
     document.getElementById('modal-product-name').textContent = currentProductInModal.name;
     document.getElementById('modal-product-description').textContent = currentProductInModal.description;
     document.getElementById('modal-product-details').textContent = currentProductInModal.details;
