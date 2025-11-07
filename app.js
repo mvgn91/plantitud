@@ -219,6 +219,17 @@ function closeCartModal() {
 // Cerrar el carrito al hacer clic en el overlay
 document.getElementById('cart-overlay').addEventListener('click', closeCartModal);
 
+// Simple hash function to generate consistent colors for product IDs
+function hashCode(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash;
+}
+
 function renderCart() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total-price');
@@ -246,14 +257,14 @@ function renderCart() {
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
         
-        // Obtener la ruta de la imagen (usar directamente el nombre del archivo)
-        // Las imágenes están en la carpeta public, por lo que podemos acceder a ellas directamente
-        const imageName = product.image.split('/').pop(); // Obtener solo el nombre del archivo
-        const imagePath = `/${imageName}`; // Ruta relativa a la raíz del sitio
+        // Generate a consistent color based on product ID
+        const colors = ['#4CAF50', '#2196F3', '#9C27B0', '#FF9800', '#E91E63', '#00BCD4', '#8BC34A', '#FF5722'];
+        const colorIndex = Math.abs(hashCode(productId)) % colors.length;
+        const bgColor = colors[colorIndex];
         
         itemElement.innerHTML = `
-            <div class="cart-item-image">
-                <img src="${imagePath}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/100?text=Imagen+no+disponible'">
+            <div class="cart-item-thumbnail" style="background-color: ${bgColor}">
+                <i data-lucide="${product.icon || 'package'}"></i>
             </div>
             <div class="cart-item-details">
                 <h4>${product.name}</h4>

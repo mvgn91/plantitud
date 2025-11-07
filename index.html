@@ -8,7 +8,79 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Toggle mobile menu
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      const menuButton = document.querySelector('.mobile-menu-btn');
+      const overlay = document.querySelector('.overlay');
+      
+      // Toggle menu, overlay and button state
+      const isOpen = navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+      menuButton.setAttribute('aria-expanded', isOpen);
+    }
+    
+    // Close menu when clicking on overlay
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.querySelector('.overlay');
+      
+      // Create overlay if it doesn't exist
+      if (!overlay) {
+        const overlayEl = document.createElement('div');
+        overlayEl.className = 'overlay';
+        overlayEl.addEventListener('click', toggleMenu);
+        document.body.appendChild(overlayEl);
+      }
+      
+      // Close menu when clicking on a link (for mobile)
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth < 768) {
+            toggleMenu();
+          }
+        });
+      });
+    });
+    
+    // Close menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.querySelector('.overlay');
+        const menuIcon = document.querySelector('.mobile-menu-btn i');
+        
+        if (navLinks.classList.contains('active')) {
+          navLinks.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          menuIcon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+      }
+    });
+  </script>
+  <style>
+    /* Add to prevent scrolling when menu is open */
+    body.menu-open {
+      overflow: hidden;
+    }
+    
+    /* Ensure overlay is behind menu but above other content */
+    .overlay {
+      display: none;
+    }
+    
+    @media (max-width: 767px) {
+      .overlay {
+        display: block;
+      }
+    }
+  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -21,7 +93,9 @@
         </div>
         <span class="logo-text">plantitud.mx</span>
       </div>
-      <button class="mobile-menu-btn" onclick="toggleMenu()"><i data-lucide="menu"></i></button>
+      <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menú de navegación" aria-expanded="false">
+        <i><span></span></i>
+      </button>
       <div class="nav-actions">
         <div id="cart-icon" class="cart-icon-wrapper">
           <i data-lucide="shopping-cart"></i>
@@ -292,32 +366,36 @@
 
   <!-- Contact Section - Rediseñada -->
   <section class="contact" id="contacto">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-content">
-          <h2 class="section-title">¡Conéctate con Nosotros!</h2>
-          <p class="contact-subtitle">Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y promociones.</p>
-        </div>
+    <div class="contact-wrapper">
+      <div class="contact-content">
+        <h2 class="section-title">¡Contáctanos!</h2>
+        <p class="contact-subtitle">Estamos aquí para responder tus preguntas. Escríbenos y te atenderemos lo antes posible.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <a href="https://wa.me/523339682571" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp">
+          <div class="contact-icon">
+            <i data-lucide="message-circle"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p class="contact-info">33 3968 2571</p>
+        </a>
         
-        <div class="social-links">
-          <a href="https://wa.me/523339682571" target="_blank" rel="noopener noreferrer" class="social-card" style="--social-color: #25D366;">
-            <i data-lucide="message-circle" class="social-icon"></i>
-            <span>WhatsApp</span>
-            <p class="contact-number">33 3968 2571</p>
-          </a>
-          
-          <a href="https://www.instagram.com/plantitud.mx/" target="_blank" rel="noopener noreferrer" class="social-card" style="--social-color: #E1306C;">
-            <i data-lucide="instagram" class="social-icon"></i>
-            <span>Instagram</span>
-            <p class="social-username">@plantitud.mx</p>
-          </a>
-          
-          <a href="https://www.tiktok.com/@plantitud.mx" target="_blank" rel="noopener noreferrer" class="social-card" style="--social-color: #000000;">
-            <i data-lucide="music-2" class="social-icon"></i>
-            <span>TikTok</span>
-            <p class="social-username">@plantitud.mx</p>
-          </a>
-        </div>
+        <a href="https://www.instagram.com/plantitud.mx/" target="_blank" rel="noopener noreferrer" class="contact-card instagram">
+          <div class="contact-icon">
+            <i data-lucide="instagram"></i>
+          </div>
+          <h3>Instagram</h3>
+          <p class="contact-info">@plantitud.mx</p>
+        </a>
+        
+        <a href="https://www.tiktok.com/@plantitud.mx" target="_blank" rel="noopener noreferrer" class="contact-card tiktok">
+          <div class="contact-icon">
+            <i data-lucide="music"></i>
+          </div>
+          <h3>TikTok</h3>
+          <p class="contact-info">@plantitud.mx</p>
+        </a>
       </div>
     </div>
   </section>
@@ -404,11 +482,15 @@
     <div class="cart-footer">
       <div class="cart-summary">
         <div class="cart-summary-row">
-          <span>Subtotal:</span>
+          <span>Subtotal</span>
           <span class="cart-subtotal">$<span id="cart-subtotal-price">0.00</span> MXN</span>
         </div>
-        <div class="cart-summary-row cart-total-row">
-          <span>Total:</span>
+        <div class="cart-summary-row">
+          <span>Envío</span>
+          <span class="cart-shipping">- - -</span>
+        </div>
+        <div class="cart-total-row">
+          <span>Total</span>
           <span class="cart-total">$<span id="cart-total-price">0.00</span> MXN</span>
         </div>
       </div>
